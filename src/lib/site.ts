@@ -14,7 +14,7 @@ export const site = {
   /** TODO: 카카오톡 채널 / 오픈채팅 링크 (빈 문자열이면 카톡 버튼이 노출되지 않음) */
   kakaoUrl: '',
   /** TODO: 도메인 구매 후 실제 주소로 교체 (index.html의 메타 태그도 함께 수정) */
-  siteUrl: 'https://pnlbio-hth.pages.dev',
+  siteUrl: 'https://hjj5946-upply.github.io/pnlbio-hth',
 } as const
 
 /** "홍태환 이사" 형태의 표기 */
