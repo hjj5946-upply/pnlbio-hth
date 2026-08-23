@@ -1,0 +1,2 @@
+# Cloudflare Pages SPA fallback — /products/{id} 같은 클라이언트 라우트 새로고침 대응
+/*    /index.html   200
