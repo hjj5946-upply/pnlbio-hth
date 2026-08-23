@@ -3,3 +3,9 @@
 @theme {
   --color-brand: #e10060;
 }
+
+html {
+  scroll-behavior: smooth;
+  /* sticky header 높이만큼 앵커 이동 위치 보정 */
+  scroll-padding-top: 5rem;
+}

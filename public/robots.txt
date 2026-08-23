@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: 도메인 구매 후 실제 주소로 교체
+Sitemap: https://pnlbio-hth.pages.dev/sitemap.xml

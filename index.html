@@ -1,10 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pnlbio-hth</title>
+
+    <!-- TODO: 도메인 구매 후 아래 https://pnlbio-hth.pages.dev 를 실제 도메인으로 일괄 교체
+         (src/lib/site.ts의 siteUrl, public/robots.txt, public/sitemap.xml도 함께 수정) -->
+
+    <title>피엔엘바이오 제품 안내 | 홍태환 이사</title>
+    <meta
+      name="description"
+      content="넥솔 오리지널, 무불소 안심치약, 바디·구강 케어 등 피엔엘바이오 제품을 정품으로 안내해 드립니다. 제품 문의는 홍태환 이사 010-7687-7878"
+    />
+    <meta name="author" content="홍태환" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#e10060" />
+    <link rel="canonical" href="https://pnlbio-hth.pages.dev/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph (카카오톡·페이스북 공유 미리보기) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="피엔엘바이오 제품 안내" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:url" content="https://pnlbio-hth.pages.dev/" />
+    <meta property="og:title" content="피엔엘바이오 제품 안내 | 홍태환 이사" />
+    <meta
+      property="og:description"
+      content="넥솔 오리지널, 무불소 안심치약, 바디·구강 케어 등 피엔엘바이오 제품을 정품으로 안내해 드립니다. 제품 문의 010-7687-7878"
+    />
+    <meta property="og:image" content="https://pnlbio-hth.pages.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta
+      property="og:image:alt"
+      content="PNLBIO 이사 홍태환 010-7687-7878"
+    />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="피엔엘바이오 제품 안내 | 홍태환 이사" />
+    <meta
+      name="twitter:description"
+      content="넥솔 오리지널, 무불소 안심치약, 바디·구강 케어 등 피엔엘바이오 제품을 정품으로 안내해 드립니다."
+    />
+    <meta name="twitter:image" content="https://pnlbio-hth.pages.dev/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://pnlbio-hth.pages.dev/#website",
+            "url": "https://pnlbio-hth.pages.dev/",
+            "name": "피엔엘바이오 제품 안내",
+            "inLanguage": "ko-KR"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://pnlbio-hth.pages.dev/#owner",
+            "name": "홍태환",
+            "jobTitle": "이사",
+            "telephone": "+82-10-7687-7878",
+            "image": "https://pnlbio-hth.pages.dev/og-image.png",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "피엔엘바이오"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
