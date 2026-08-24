@@ -11,7 +11,7 @@ import type { Product } from '../types/product'
 export const products: Product[] = [
   {
     id: 'neck-sol',
-    name: '넥솔 오리지널',
+    name: '넥졸 오리지널',
     volume: '200ml',
     description: '목과 얼굴 부위에 수분감을 더해 산뜻하게 가꿔주는 케어 젤입니다.',
   },
