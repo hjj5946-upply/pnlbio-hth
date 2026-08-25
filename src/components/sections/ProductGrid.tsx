@@ -107,19 +107,27 @@ export default function ProductGrid({ showPrice = SHOW_PRICE }: ProductGridProps
               >
                 <Card className="flex h-full cursor-pointer flex-col group-hover:border-gray-300">
                 {/*
-                  제품 이미지 자리.
-                  실제 파일 컨벤션: src/assets/images/product-{id}.webp (webp로 변환해 사용)
-                  예) product-neck-sol.webp → import 후 아래 div를 <img alt="{제품명} 제품 이미지" />로 교체
+                  제품 이미지 (아직 사진이 없는 제품은 준비 중 placeholder).
+                  원본이 모두 5:6 세로 이미지라 카드도 5:6으로 맞춰 여백 없이 꽉 채운다.
                 */}
-                <div
-                  role="img"
-                  aria-label={`${product.name} 제품 이미지 (준비 중)`}
-                  className={`flex aspect-square w-full items-center justify-center bg-gray-200 px-2 text-center text-gray-500 sm:text-base ${
-                    isSingle ? 'text-base' : 'text-sm'
-                  }`}
-                >
-                  {product.name}
-                </div>
+                {product.image ? (
+                  <img
+                    src={product.image}
+                    alt={`${product.name} 제품 이미지`}
+                    loading="lazy"
+                    className="aspect-5/6 w-full object-cover"
+                  />
+                ) : (
+                  <div
+                    role="img"
+                    aria-label={`${product.name} 제품 이미지 (준비 중)`}
+                    className={`flex aspect-5/6 w-full items-center justify-center bg-gray-200 px-2 text-center text-gray-500 sm:text-base ${
+                      isSingle ? 'text-base' : 'text-sm'
+                    }`}
+                  >
+                    {product.name}
+                  </div>
+                )}
 
                 <div
                   className={`flex flex-1 flex-col sm:p-6 ${isSingle ? 'p-6' : 'p-4'}`}

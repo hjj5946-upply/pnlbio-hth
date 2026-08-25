@@ -53,17 +53,24 @@ export default function ProductDetail() {
 
         <div className="mt-6 grid gap-10 md:grid-cols-2 md:gap-14">
           {/*
-            제품 이미지 자리.
-            실제 파일 컨벤션: src/assets/images/product-{id}.webp (webp로 변환해 사용)
-            예) product-neck-sol.webp → import 후 아래 div를 <img alt="{제품명} 제품 이미지" />로 교체
+            제품 이미지 (아직 사진이 없는 제품은 준비 중 placeholder).
+            상세에서는 잘림 없이 원본 전체를 보여주므로 높이를 비율에 맡긴다.
           */}
-          <div
-            role="img"
-            aria-label={`${product.name} 제품 이미지 (준비 중)`}
-            className="flex aspect-square w-full items-center justify-center rounded-2xl bg-gray-200 px-4 text-center text-base text-gray-500"
-          >
-            {product.name}
-          </div>
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={`${product.name} 제품 이미지`}
+              className="block h-auto w-full rounded-2xl"
+            />
+          ) : (
+            <div
+              role="img"
+              aria-label={`${product.name} 제품 이미지 (준비 중)`}
+              className="flex aspect-5/6 w-full items-center justify-center rounded-2xl bg-gray-200 px-4 text-center text-base text-gray-500"
+            >
+              {product.name}
+            </div>
+          )}
 
           <div>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-4xl">
