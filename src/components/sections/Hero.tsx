@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from '../../lib/gsap'
 import Button from '../ui/Button'
 import { phoneHref } from '../../lib/site'
+import heroBg from '../../assets/images/hero_bg.webp'
 
 export default function Hero() {
   const rootRef = useRef<HTMLElement>(null)
@@ -10,7 +11,8 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       gsap
         .timeline({ defaults: { ease: 'power3.out', duration: 0.9 } })
-        .from('[data-hero="eyebrow"]', { opacity: 0, y: 20 })
+        .from('[data-hero="bg"]', { opacity: 0, scale: 1.06, duration: 1.4 })
+        .from('[data-hero="eyebrow"]', { opacity: 0, y: 20 }, '-=1.1')
         .from('[data-hero="title"]', { opacity: 0, y: 32 }, '-=0.6')
         .from('[data-hero="subtitle"]', { opacity: 0, y: 24 }, '-=0.6')
         .from('[data-hero="cta"]', { opacity: 0, y: 20 }, '-=0.6')
@@ -23,9 +25,23 @@ export default function Hero() {
     <section
       id="top"
       ref={rootRef}
-      className="bg-gray-50 px-5 py-20 sm:px-8 sm:py-28 lg:py-36"
+      className="relative overflow-hidden bg-gray-50 px-5 py-20 sm:px-8 sm:py-28 lg:py-36"
     >
-      <div className="mx-auto max-w-3xl text-center">
+      <img
+        data-hero="bg"
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        fetchPriority="high"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center select-none [filter:contrast(1.1)_saturate(1.08)_brightness(0.99)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-white/50 sm:bg-gradient-to-r sm:from-white/80 sm:via-white/62 sm:to-white/25"
+      />
+
+      <div className="relative mx-auto max-w-3xl text-center">
         <p
           data-hero="eyebrow"
           className="text-base font-medium tracking-wide text-gray-500 sm:text-lg"
